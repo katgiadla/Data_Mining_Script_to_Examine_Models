@@ -13,4 +13,4 @@ if __name__ == '__main__':
         print("Too much or not much")
         exit()
     df = read_convert_csv(sys.argv[1])
-    print(df)
+    print_data(df)
