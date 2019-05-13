@@ -9,3 +9,4 @@ if __name__ == '__main__':
         exit()
     df = read_convert_csv(sys.argv[1])
     print_data(df.get_values())
+    print_data(len(df))
