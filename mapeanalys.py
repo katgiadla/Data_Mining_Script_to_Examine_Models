@@ -8,7 +8,10 @@ def calculateErrors(CSVFile: pd.DataFrame):
     return errorTab
 
 def calculatePercentageErrors(CSVFile: pd.DataFrame, errorsTab: np.ndarray):
-    percentageErrorsTab = np.zeros((len(CSVFile), 1))
+    percentageErrorsTab = np.zeros((len(errorsTab), 1))
     for i in range(0, len(CSVFile)):
         percentageErrorsTab[i] = (errorsTab[i]/CSVFile.iloc[i]['RealData'])*100
     return percentageErrorsTab
+
+def calculateMeanError(errorTab: np.ndarray):
+    return (1/errorTab.size)*sum(errorTab)
