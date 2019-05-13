@@ -6,6 +6,6 @@ def read_convert_csv(pathtofile: str):
                      dtype={'DaneReal': float, 'Model': float})
     return df
 
-def print_data(mydata: object):
+def print_data(mydata: pd.DataFrame):
     print(mydata)
     return
