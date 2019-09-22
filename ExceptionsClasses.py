@@ -1,7 +1,10 @@
-class ExceptionClasses(Exception):
+class Error(Exception):
     pass
 
-class FailureFileException(ExceptionClasses):
+class FailureFileException(Error):
 
-    def __init__(self, message: str):
+    def __init__(self, message):
         self.message = message
+
+    def __str__(self):
+        print(self.message)

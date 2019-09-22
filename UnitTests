@@ -1,3 +1,10 @@
 import unittest
 import mapeanalys
+import ExceptionsClasses
+from Entryoffile import check_file
 
+class Test_main_functions(unittest.TestCase):
+
+    @classmethod
+    def test_check_file(cls):
+        cls.assertRaises(ExceptionsClasses.FailureFileException, check_file)
