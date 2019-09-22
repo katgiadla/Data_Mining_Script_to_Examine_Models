@@ -1,9 +1,9 @@
 import sys
-from ExceptionsClasses import FailureInputException
+import ExceptionsClasses as ec
 
 def check_file():
     if (sys.argv).__len__() != 2:
-        raise FailureInputException('Too much or too such file')
+        raise ec.FailureFileException('Too much or too such file')
     else:
         pass
     return
